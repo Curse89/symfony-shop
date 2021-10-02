@@ -66,6 +66,11 @@ class User implements UserInterface
      * @ORM\Column(type="boolean")
      */
     private $isDeleted;
+    
+    public function __construct()
+    {
+        $this->isDeleted = false;
+    }
 
     public function getId(): ?int
     {
